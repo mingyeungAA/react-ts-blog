@@ -1,4 +1,3 @@
-import './App.scss';
 import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
 import ListPage from './pages/list'
 import WritePage from './pages/write'

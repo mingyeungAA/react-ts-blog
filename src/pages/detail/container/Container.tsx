@@ -35,15 +35,15 @@ const Container: React.FC = () => {
   
   return (
     <>
-    <div className="max-w-xl mx-auto space-y-6">
-      <div className="flex items-center justify-between">
-        <h2 className="text-3xl font-bold">{post.title}</h2>
-        <span className="text-sm text-gray-500">
+    <div className="detail-page">
+      <div>
+        <h2>{post.title}</h2>
+        <span>
           {post.createdAt.slice(0,10)}
         </span>
       </div>
-      <p className="whitespace-pre-wrap leading-relaxed">{post.content}</p>
-      <button onClick={handleUpdate} className="text-blue-700">
+      <p>{post.content}</p>
+      <button onClick={handleUpdate}>
         수정하기
       </button>
     </div>

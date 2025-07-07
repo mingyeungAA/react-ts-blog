@@ -43,21 +43,19 @@ const Container: React.FC = () => {
   }
 
   return(
-    <div className="max-w-xl mx-auto space-y-4">
+    <div className="write-page">
       <input 
         type="text" 
         value={title} 
         onChange={handleTitle} 
-        placeholder="제목.." 
-        className="w-full border border-gray-300 p-2 rounded" 
+        placeholder="제목.."  
       />
       <textarea 
         value={content} 
         onChange={handleContent} 
         placeholder='내용을 입력하세요...'
-        className="w-full border border-gray-300 p-2 h-40 rounded resize-none"
       />
-      <button onClick={handleSubmit} className='px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600'>저장</button>
+      <button onClick={handleSubmit}>저장</button>
     </div>
   )
 }

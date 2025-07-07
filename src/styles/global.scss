@@ -1,0 +1,18 @@
+/* src/styles/global.scss */
+@use './variables' as v;
+
+@mixin card {
+  background     : #fff;
+  border         : 1px solid v.$color-border;
+  border-radius  : v.$radius;
+  padding        : 24px;
+  box-shadow     : 0 2px 6px rgba(0,0,0,.05);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin : 0;
+  font-family: system-ui, sans-serif;
+  background : v.$color-bg;
+}

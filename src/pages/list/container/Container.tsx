@@ -21,16 +21,18 @@ const Container: React.FC = () => {
   }, []);
 
   return(
-    <div className="max-w-xl mx-auto space-y-4">
+    <div className="list-page">
       {posts.length === 0 ? (
-        <p className="text-gray-500 text-center">작성된 글이 없습니다.</p>
+        <p>작성된 글이 없습니다.</p>
       ) : (
-        posts.map((post) => (
-          <div key={post.id} className="p-4 border rounded shadow hover:bg-gray-50 cursor-pointer" onClick={() => navigate(`/detail/${post.id}`)}>
-            <p className="text-xl font-semibold text-blue-700"><strong>{post.title}</strong></p>
-            <p className="text-gray-800 mt-2 line-clamp-2">{post.content}</p>
-          </div>
-        ))
+        <ul>
+          {posts.map(post => (
+            <li key={post.id} onClick={() => navigate(`/detail/${post.id}`)}>
+              <p><strong>{post.title}</strong></p>
+              <p>{post.content}</p>
+            </li>
+          ))}
+        </ul>
       )}
     </div>
   )
