@@ -1,0 +1,17 @@
+// src/App.scss
+$bg-body: #f7f7f8;
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: $bg-body;
+}
+
+/* 공통 카드 레이아웃 */
+.card {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .06);
+}

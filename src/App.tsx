@@ -1,7 +1,8 @@
-import './App.css';
+import './App.scss';
 import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
-import ListPage from './pages/list';
-import WritePage from './pages/write';
+import ListPage from './pages/list'
+import WritePage from './pages/write'
+import DetailPage from './pages/detail'
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<ListPage />} />
           <Route path="/write" element={<WritePage />} />
+          <Route path="/detail/:id" element={<DetailPage />}/>
         </Routes>
       </main>
     </BrowserRouter>
