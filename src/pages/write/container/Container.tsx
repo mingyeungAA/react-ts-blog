@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import type { ChangeEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
+import WriteForm from '../../../common/WriteForm';
 
 type Post = {
   id: number,
@@ -43,20 +44,14 @@ const Container: React.FC = () => {
   }
 
   return(
-    <div className="write-page">
-      <input 
-        type="text" 
-        value={title} 
-        onChange={handleTitle} 
-        placeholder="제목.."  
-      />
-      <textarea 
-        value={content} 
-        onChange={handleContent} 
-        placeholder='내용을 입력하세요...'
-      />
-      <button onClick={handleSubmit}>저장</button>
-    </div>
+    <WriteForm 
+      title={title}
+      content={content}
+      onTitleChange={handleTitle}
+      onContentChange={handleContent}
+      onSubmit={handleSubmit}
+      submitLabel='저장'
+    />
   )
 }
 

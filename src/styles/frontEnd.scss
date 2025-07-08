@@ -10,6 +10,7 @@
   h2   { font-size: 24px; color: v.$color-primary; }
   ul   { 
     margin: 10px 0 0; 
+    padding: 0;
     list-style: none; 
   }
 
@@ -38,6 +39,7 @@
 
   button {
     margin-top: 12px;
+    margin-right: 3px;
     background: v.$color-primary;
     color: #fff;
     border: none;
@@ -54,6 +56,19 @@
   @include g.card;
   padding: 24px;
   border: 1px solid v.$color-border;
+
+  button{
+    margin-top: 12px;
+    margin-right: 3px;
+    background: v.$color-primary;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+
+    &:hover { background: darken(v.$color-primary, 10%); }
+  }
 }
 
 /* ───────── Update Page ───────── */

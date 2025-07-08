@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import {Link} from 'react-router-dom'
 
 type Post = {
@@ -12,10 +12,11 @@ type Post = {
 const Container: React.FC = () => {
   const {id} = useParams<string>();
   const [post, setPost] = useState<Post | null>(null);
+  const navigate = useNavigate();
 
-  const handleUpdate = () => {
-
-  }
+  // const handleUpdate = () => {
+  //   navigate('/detail/')
+  // }
 
   useEffect(() => {
     const saved = localStorage.getItem('posts');
@@ -43,8 +44,11 @@ const Container: React.FC = () => {
         </span>
       </div>
       <p>{post.content}</p>
-      <button onClick={handleUpdate}>
-        수정하기
+      <button onClick={() => navigate('/')}>
+        ⬅
+      </button>
+      <button onClick={() => navigate(`/update/${post.id}`)}>
+        수정
       </button>
     </div>
     </>
