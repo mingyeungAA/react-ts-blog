@@ -2,13 +2,7 @@ import { useState } from 'react';
 import type { ChangeEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import WriteForm from '../../../common/WriteForm';
-
-type Post = {
-  id: number,
-  title: string,
-  content: string,
-  createdAt: string
-}
+import type { Post } from '../../../types';
 
 const Container: React.FC = () => {
 

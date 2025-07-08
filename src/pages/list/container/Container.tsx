@@ -1,12 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-
-type Post = {
-  id: number,
-  title: string,
-  content: string,
-  createdAt: string,
-}
+import type { Post } from "../../../types";
 
 const Container: React.FC = () => {
   const [posts, setPosts] = useState<Post[]>([]);

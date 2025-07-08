@@ -1,13 +1,7 @@
 import { useEffect, useState, type ChangeEvent } from "react";
 import WriteForm from "../../../common/WriteForm";
 import { useNavigate, useParams } from "react-router-dom";
-
-type Post = {
-  id: number;
-  title: string;
-  content: string;
-  createdAt: string;
-}
+import type { Post } from "../../../types";
 
 const Container: React.FC = () => {
   const {id} = useParams();
